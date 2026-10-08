@@ -156,7 +156,7 @@ jobs:
         run: echo "image_tag=sha-${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
 
       - name: Configure AWS credentials (OIDC)
-        uses: aws-actions/configure-aws-credentials@61815dcd50bd041e203e49132bacad1fd04d2708 # v5
+        uses: aws-actions/configure-aws-credentials@e1253824e5c10ff9df46874f81ed3ec929e19cfd # v6.3.0
         with:
           role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/mackllc-dev-ecr-push-gha
           aws-region: ${{ env.AWS_REGION }}
